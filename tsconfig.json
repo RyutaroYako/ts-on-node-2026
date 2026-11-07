@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "jsx": "react",
+    "noEmit": true,
+    "rootDir": ".",
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "paths": {
+      "@/*": ["./cases/syntax/lib/*"]
+    }
+  },
+  "include": ["cases"],
+  "exclude": [
+    "cases/syntax/legacy-decorator",
+    "cases/syntax/cjs",
+    "cases/perf/many"
+  ]
+}
