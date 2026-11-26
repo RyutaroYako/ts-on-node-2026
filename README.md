@@ -2,27 +2,27 @@
 
 TypeScript を Node.js 上で実行する方法を、構文対応と起動速度で比較する検証コードです。
 
-比較対象は次の 5 つです。
+比較対象は以下の 5 つです。
 
 - Node.js 単体（type stripping）
 - [tsx](https://tsx.is/)
 - [ts-node](https://github.com/TypeStrong/ts-node)（CJS モードと ESM モード）
-- [vite-node](https://github.com/antfu-collective/vite-node)
+- [vite-node](https://github.com/made-in-common/vite-node)
 - [oxc-node](https://github.com/oxc-project/oxc-node)（`node --import @oxc-node/core/register` と `oxnode` CLI）
 
 ## 検証環境
 
-`results/` の結果は、次の環境で取得したものです（2026-11-06）。
+`results/` の結果は、以下の環境で取得したものです（2026-11-26）。
 
 - OS / CPU: WSL2（Linux 6.18） / Intel Core i9-13900H（20 スレッド）
-- Node.js: v26.13.0
+- Node.js: v26.13.1
 
 | ツール | バージョン |
 | --- | --- |
 | tsx | 4.23.15 |
-| ts-node | 10.9.2（typescript 6.0.3 / @swc/core 1.16.21） |
-| vite-node | 6.0.0（vite 8.3.5） |
-| @oxc-node/core / @oxc-node/cli | 1.0.1 |
+| ts-node | 10.9.2（typescript 6.0.3 / @swc/core 1.16.22） |
+| vite-node | 6.0.0（vite 8.3.8） |
+| @oxc-node/core / @oxc-node/cli | 1.0.3 |
 | hyperfine | 1.21.0 |
 
 ts-node は TypeScript 7 では起動しないため、TypeScript は 6.0.3 を使っています。
@@ -36,7 +36,7 @@ pnpm syntax           # 構文対応を検証し、results/syntax.md に出力�
 RUNS=50 pnpm perf     # 起動速度を計測し、results/perf/ に出力する（hyperfine が必要）
 ```
 
-`pnpm perf` は、次の環境変数で動作を変えられます。
+`pnpm perf` は、以下の環境変数で動作を変えられます。
 
 | 環境変数 | デフォルト | 内容 |
 | --- | --- | --- |

@@ -8,15 +8,15 @@
     "perf": "bash scripts/perf.sh"
   },
   "devDependencies": {
-    "@oxc-node/cli": "1.0.1",
-    "@oxc-node/core": "1.0.1",
-    "@oxc-project/runtime": "^0.157.0",
-    "@swc/core": "^1.16.21",
-    "@types/node": "^26.6.6",
+    "@oxc-node/cli": "1.0.3",
+    "@oxc-node/core": "1.0.3",
+    "@oxc-project/runtime": "^0.160.0",
+    "@swc/core": "^1.16.22",
+    "@types/node": "^26.6.11",
     "ts-node": "10.9.2",
     "tsx": "4.23.15",
     "typescript": "6.0.3",
-    "vite": "^8.3.5",
+    "vite": "^8.3.8",
     "vite-node": "6.0.0"
   }
 }
